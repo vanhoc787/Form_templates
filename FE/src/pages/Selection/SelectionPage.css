@@ -1,0 +1,419 @@
+/* EvaluationForm.css */
+
+/* --- Cài đặt chung & Font --- */
+.page-container {
+    background-color: #f3f4f6; /* Tương đương bg-gray-100 */
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Thẻ chính chứa toàn bộ form --- */
+.evaluation-card {
+    max-width: 100rem; /* Tương đương max-w-7xl */
+    margin: auto;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+/* --- Khu vực tiêu đề --- */
+.header-section {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.header-section h1 {
+    font-size: 1.875rem; /* Tương đương text-3xl */
+    font-weight: 700;
+    color: #1f2937; /* Tương đương text-gray-800 */
+    margin: 0;
+}
+
+/* --- Khu vực thông tin cá nhân --- */
+.personal-info-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8fafc; /* Tương đương bg-slate-50 */
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0; /* Tương đương border-slate-200 */
+}
+
+.personal-info-section h3 {
+    font-size: 1.125rem; /* Tương đương text-lg */
+    font-weight: 600;
+    color: #1e293b; /* Tương đương text-slate-800 */
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mặc định 1 cột */
+    gap: 1.5rem;
+}
+
+/* Responsive: 2 cột trên màn hình lớn hơn */
+@media (min-width: 768px) {
+    .personal-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151; /* Tương đương text-gray-700 */
+    margin-bottom: 0.5rem;
+}
+
+.input-group .icon {
+    margin-right: 0.5rem;
+    color: #9ca3af; /* Tương đương text-gray-400 */
+}
+
+/* --- Định dạng chung cho Input --- */
+.custom-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+    color: #374151;
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: #4f46e5; /* Tương đương border-indigo-500 */
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5); /* Tương đương ring-2 ring-indigo-500 */
+}
+
+.custom-input:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+    color: #9ca3af;
+}
+
+.custom-input::placeholder {
+    color: #9ca3af; /* Tương đương placeholder-gray-400 */
+}
+
+.input-required .custom-input {
+    background-color: white;
+    border: 1px solid #f59e0b;
+}
+
+.input-required .custom-input:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+/* --- Khu vực lựa chọn (Grid) --- */
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mặc định 1 cột */
+    margin-bottom: 2rem;
+    padding: 0.7rem;
+    padding-left: 1.5rem;
+    background-color: #f9fafb; /* Tương đương bg-gray-50 */
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb; /* Tương đương border-gray-200 */
+}
+
+.selection-grid h3 {
+    font-size: 1.125rem; /* Tương đương text-lg */
+    font-weight: 600;
+    color: #1e293b; /* Tương đương text-slate-800 */
+    margin-bottom: 0;
+    margin-top: 0;
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+.text-muted{
+    font-size: 0.875rem;
+    color: #1e293b; /* Tương đương text-gray-500 */
+}
+
+/* Responsive: 3 cột trên màn hình lớn hơn */
+@media (min-width: 768px) {
+    .selection-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.select-group{
+    margin: 0.25rem;
+}
+
+.select-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151; /* Tương đương text-gray-700 */
+    margin-bottom: 0.5rem;
+}
+
+.select-group .icon {
+    margin-right: 0.5rem;
+    color: #9ca3af; /* Tương đương text-gray-400 */
+}
+
+/* --- Định dạng chung cho Select --- */
+.custom-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 2.5rem;
+}
+
+.custom-select:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #4f46e5; /* Tương đương border-indigo-500 */
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5); /* Tương đương ring-2 ring-indigo-500 */
+}
+
+/* --- Bảng đánh giá --- */
+.evaluation-table-container {
+    margin-top: 2rem;
+}
+
+.evaluation-table-container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+.results-table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table thead {
+    background-color: #f9fafb;
+}
+
+.results-table th, .results-table td {
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.results-table th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.results-table td {
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.results-table .text-center {
+    text-align: center;
+}
+
+/* --- Nút bấm --- */
+.action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-save:hover {
+    background-color: #218838;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+}
+
+.btn-approve {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.btn-approve:hover {
+    background-color: #e38c0a;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-primary {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+
+/* Bao bọc bảng để có thể cuộn ngang nếu bảng Excel quá rộng */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Lớp CSS cốt lõi định hình lại toàn bộ cấu trúc bảng */
+.excel-table {
+  border-collapse: collapse;
+  table-layout: fixed; /* Ép bảng sử dụng width từ thẻ <colgroup> */
+  width: max-content;  /* Bảng sẽ có độ rộng bằng tổng các cột cộng lại */
+  background-color: #ffffff;
+}
+
+.excel-table td {
+  border: 1px solid #d1d5db;
+  padding: 6px 9px;
+  vertical-align: middle;
+  word-wrap: break-word;   /* Bắt buộc: để text dài rớt xuống dòng */
+  white-space: pre-wrap;   /* Bắt buộc: giữ lại các dấu Enter xuống dòng từ Excel */
+  font-size: 12px;
+  color: #374151;
+}
+
+/* Lớp phủ cho các ô chỉ để đọc (Tiêu đề, hướng dẫn...) */
+.cell-text {
+  background-color: #f9fafb;
+}
+
+/* Lớp cho ô nhập liệu: Xóa padding của <td> để <textarea> lấp đầy */
+.cell-input-wrapper {
+  padding: 0 !important; 
+  background-color: #ffffff;
+}
+
+/* Biến thẻ input/textarea thành một ô vô hình, lấp đầy <td> */
+.excel-input {
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
+  box-sizing: border-box;
+  border: none;
+  padding: 6px 9px;
+  background-color: #fef9c3; /* Nền vàng nhạt để báo hiệu đây là nơi nhập liệu */
+  font-family: inherit;
+  font-size: 12px;
+  resize: vertical; /* Cho phép user kéo giãn chiều cao nếu viết nhiều */
+  outline: none;
+}
+
+.excel-input:focus {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 2px #3b82f6; /* Viền xanh khi đang gõ chữ */
+}
+
+.btn_auto_fill{
+    background-color: #28a745;
+    color: #fff;
+    border: none; 
+    float: left;
+}
+.div_auto_fill{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    font-size: 12px;
+    padding: 8px;
+    margin-top: -40px;
+}
+
+/* ========================================================
+   GIAO DIỆN NÚT BẤM KHI BỊ VÔ HIỆU HÓA (DISABLED)
+   ======================================================== */
+button:disabled,
+button[disabled] {
+  opacity: 0.5 !important; /* Làm mờ nút đi 50% */
+  cursor: not-allowed !important; /* Hiển thị icon vòng tròn gạch chéo */
+}
+
+/* Xóa bỏ mọi hiệu ứng hover (đổi màu, bóng đổ, phóng to...) khi bị disabled */
+button:disabled:hover,
+button[disabled]:hover {
+  filter: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  /* Nếu nút của bạn có đổi màu nền khi hover, thêm dòng dưới đây để khóa màu lại */
+  /* background-color: inherit !important; */
+}
+
+/* === ĐỘ RỘNG CỘT TÙY CHỈNH === */
+
+.excel-table th:nth-child(1),
+.excel-table td:nth-child(1) {
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+}
+
+.excel-table th:nth-child(2),
+.excel-table td:nth-child(2) {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.excel-table th:nth-child(4),
+.excel-table td:nth-child(4) {
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
+
+.excel-table th:nth-child(5),
+.excel-table td:nth-child(5) {
+  width: 65px !important;
+  min-width: 65px !important;
+  max-width: 65px !important;
+}
